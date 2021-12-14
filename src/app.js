@@ -12,7 +12,7 @@ const forecast = require('./utils/forecast')
 const app = express()
 
 //we will extract the port value from the heroku and default value
-const port  = Process.env.PORT || 3000
+const port  = process.env.PORT || 3000
 
 //we will be storing the public path directory
 //define paths for express config
@@ -114,6 +114,6 @@ app.get('*',(req,res) => {
 
 
 //To run the Express Server 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is running on the port : ' + port)
 })
